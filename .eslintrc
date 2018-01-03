@@ -1,6 +1,12 @@
 {
   "parser": "babel-eslint",
   "extends": "airbnb",
+  "globals": {
+    "FileReader": true,
+    "localStorage": true,
+    "document": true,
+    "window": true
+  },
   "rules": {
     "arrow-body-style": [0],
     "consistent-return": [0],
@@ -14,6 +20,7 @@
     "no-bitwise": [0],
     "no-cond-assign": [0],
     "no-else-return": [0],
+    "no-console": [0],
     "no-nested-ternary": [0],
     "no-restricted-syntax": [0],
     "no-use-before-define": [0],

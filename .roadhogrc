@@ -1,10 +1,18 @@
 {
   "entry": "src/index.js",
+  "proxy": {
+    "/api": {
+      "target": "http://localhost:2366",
+      "changeOrigin": true,
+      "pathRewrite": { "^/api" : "" }
+    }
+  },
   "env": {
     "development": {
       "extraBabelPlugins": [
         "dva-hmr",
-        "transform-runtime"
+        "transform-runtime",
+        ["import", { "libraryName": "antd", "style": "css" }]
       ]
     },
     "production": {
